@@ -18,7 +18,6 @@ public class GameController : MonoBehaviour {
 	private int lives;
 	private int score;
 
-
 	// Use this for initialization
 	void Start () {
 
@@ -84,5 +83,6 @@ public class GameController : MonoBehaviour {
 
 		}
 	}
+
 
 }

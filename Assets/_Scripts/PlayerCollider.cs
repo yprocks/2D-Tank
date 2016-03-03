@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerCollider : MonoBehaviour {
 
 	public GameController gameController;
+	public GameObject tank;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,7 @@ public class PlayerCollider : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 
 	public void OnTriggerEnter2D(Collider2D other){
@@ -24,7 +25,10 @@ public class PlayerCollider : MonoBehaviour {
 		
 			if (other.gameObject.CompareTag ("Enemy")) {
 				gameController.RemoveLife();
+				other.transform.position = new Vector2 (Random.Range(-287F, 287F), 290F);
 			}
 		}
 	}
+
+
 }
