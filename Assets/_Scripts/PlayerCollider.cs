@@ -26,6 +26,7 @@ public class PlayerCollider : MonoBehaviour {
 			if (other.gameObject.CompareTag ("Enemy")) {
 				gameController.RemoveLife();
 				other.transform.position = new Vector2 (Random.Range(-287F, 287F), 290F);
+				//reset
 			}
 		}
 	}
